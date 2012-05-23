@@ -113,6 +113,8 @@ FUIT.util = {
                     obj.style[prop] = (FUIT.util.left(obj) + step) + 'px';
                     setTimeout(arguments.callee, delay);
                 }
+            } else {
+                obj.style[prop] = value + "px";
             }
             before = new Date();
         }
