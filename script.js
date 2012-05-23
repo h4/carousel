@@ -100,12 +100,21 @@ FUIT.util = {
         var obj = obj,
             prop = prop,
             value = value,
-            step = FUIT.util.left(obj) >= value ? -100 : 100;
+            step = FUIT.util.left(obj) >= value ? -100 : 100,
+            before = new Date(),
+            now,
+            delay = 50,
+            elapsedTime;
         function go() {
-            if(Math.abs(FUIT.util.left(obj) - value)) {
-                obj.style[prop] = (FUIT.util.left(obj) + step) + 'px';
-                setTimeout(arguments.callee, 50);
+            now = new Date();
+            elapsedTime = now.getTime() - before.getTime();
+            if (elapsedTime < delay * 5) {
+                if(Math.abs(FUIT.util.left(obj) - value)) {
+                    obj.style[prop] = (FUIT.util.left(obj) + step) + 'px';
+                    setTimeout(arguments.callee, delay);
+                }
             }
+            before = new Date();
         }
         go();
     }
