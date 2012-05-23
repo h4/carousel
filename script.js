@@ -53,11 +53,11 @@ FUIT.util = {
             return (node || document).getElementsByClassName(classList);
         } else {
             var node = node || document,
-                list = node.getElementsByTagName('*'), 
-                length = list.length,  
-                classArray = classList.split(/\s+/), 
-                classes = classArray.length, 
-                result = [], 
+                list = node.getElementsByTagName('*'),
+                length = list.length,
+                classArray = classList.split(/\s+/),
+                classes = classArray.length,
+                result = [],
                 i,
                 j;
 
