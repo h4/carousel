@@ -97,10 +97,7 @@ FUIT.util = {
         return children;
     },
     animate: function(obj, prop, value) {
-        var obj = obj,
-            prop = prop,
-            value = value,
-            step = FUIT.util.left(obj) >= value ? -100 : 100,
+        var step = FUIT.util.left(obj) >= value ? -100 : 100,
             before = new Date(),
             now,
             delay = 50,
