@@ -4,12 +4,13 @@
     overflow:hidden;
     }
 .carousel {
-    position:relative;
     font-size:0;
-    list-style:none;
+    position:relative;
+    left:0;
+    height:100%;
     margin:0;
     padding:0;
-    height:100%;
+    list-style:none;
     white-space:nowrap;
     }
 .carousel-item {
