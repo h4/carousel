@@ -43,3 +43,21 @@
     padding:8px;
     background:rgba(255,255,255,0.6);
 }
+.pager {
+    list-style: none;
+    margin: 1em 0;
+    padding: 0;
+}
+.pager li {
+    display: inline-block;
+    margin: 0 1ex;
+    padding: 0;
+    height:1ex;
+    width: 1ex;
+    border: solid 1px;
+    border-radius:.6ex;
+    cursor: pointer;
+    }
+    .pager .current {
+        background: #009;
+        }
