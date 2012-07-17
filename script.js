@@ -49,11 +49,12 @@ FUIT.carousel = (function() {
 
 FUIT.util = {
     getByClassName: function(classList, node) {
+        node = node || document;
+            
         if(document.getElementsByClassName) {
-            return (node || document).getElementsByClassName(classList);
+            return node.getElementsByClassName(classList);
         } else {
-            var node = node || document,
-                list = node.getElementsByTagName('*'),
+            var list = node.getElementsByTagName('*'),
                 length = list.length,
                 classArray = classList.split(/\s+/),
                 classes = classArray.length,
